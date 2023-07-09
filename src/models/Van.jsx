@@ -48,6 +48,8 @@ export default function Van(props) {
         e.object.material.color.r = realColor.r + 0.05;
         e.object.material.color.g = realColor.g + 0.05;
         e.object.material.color.b = realColor.b + 0.05;
+
+        window.document.body.style.cursor = "pointer";
     };
 
     const onVanLeave = (e) => {
@@ -57,6 +59,8 @@ export default function Van(props) {
         e.object.material.color.r = realColor.r;
         e.object.material.color.g = realColor.g;
         e.object.material.color.b = realColor.b;
+
+        window.document.body.style.cursor = "auto";
     };
 
     return (

@@ -8,10 +8,9 @@ export default function Experience() {
 
     return (
         <>
+            <OrbitControls makeDefault />
             <Stage environment="sunset" adjustCamera={true}>
-                <PresentationControls global polar={[-1, 0.2]}>
-                    <Van rotation-y={Math.PI * 0.25} />
-                </PresentationControls>
+                <Van rotation-y={Math.PI * 0.25} />
             </Stage>
         </>
     );
