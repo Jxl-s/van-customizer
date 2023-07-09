@@ -1,6 +1,7 @@
-import { OrbitControls, PresentationControls, Stage } from "@react-three/drei";
+import { OrbitControls, Stage } from "@react-three/drei";
 import Van from "./models/Van";
 import { useThree } from "@react-three/fiber";
+import { Suspense } from "react";
 
 export default function Experience() {
     const { camera } = useThree();
@@ -10,7 +11,9 @@ export default function Experience() {
         <>
             <OrbitControls makeDefault />
             <Stage environment="sunset" adjustCamera={true}>
-                <Van rotation-y={Math.PI * 0.25} />
+                <Suspense fallback={null}>
+                    <Van rotation-y={Math.PI * 0.25} />
+                </Suspense>
             </Stage>
         </>
     );

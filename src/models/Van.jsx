@@ -67,7 +67,7 @@ export default function Van(props) {
         <group
             {...props}
             dispose={null}
-            onClick={onVanClick}
+            onPointerDown={onVanClick}
             onPointerOver={onVanOver}
             onPointerLeave={onVanLeave}
         >
